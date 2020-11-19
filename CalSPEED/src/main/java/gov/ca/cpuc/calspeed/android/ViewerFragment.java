@@ -189,8 +189,7 @@ public class ViewerFragment extends SherlockFragment implements
 	//added for temporary Google Geocode
 	private String jsonCoord(String address) throws IOException {
 		URL url = new URL("https://maps.googleapis.com/maps/api/geocode/json?address=" +
-				address + "&components=administrative_area:CA|country:US&sensor=false&" +
-				"key=AIzaSyBErj9HpaVi13AjChFZ2d8DhRJkCHuth0s");
+				address + "&components=administrative_area:CA|country:US&sensor=false&");
         Log.v("JSONCoord", "Making connection to " + url.toString());
 		URLConnection connection = url.openConnection();
 		BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
@@ -388,7 +387,7 @@ public class ViewerFragment extends SherlockFragment implements
 							+ target.latitude
 							+ ","
 							+ target.longitude
-							+ "&sensor=true&key=AIzaSyBErj9HpaVi13AjChFZ2d8DhRJkCHuth0s";
+							+ "&sensor=true&";
                     String geoCodingResults = "";
 					try {
 						final ReverseGeo geoCoder = new ReverseGeo();
@@ -437,7 +436,7 @@ public class ViewerFragment extends SherlockFragment implements
 							String latVal = String.valueOf(target.latitude);
 							String lngVal = String.valueOf(target.longitude);
                             try {
-								reverseGeo = "http://www.mapquestapi.com/geocoding/v1/reverse?key=Fmjtd%7Cluubnu6bn1%2Cr2%3Do5-9uyn5w&json="
+								reverseGeo = "http://www.mapquestapi.com/geocoding/v1/reverse?&json="
 								   + URLEncoder.encode("{location:{latLng:{lat:", "UTF-8") 
 								   + URLEncoder.encode(latVal, "UTF-8")
 								   + ",lng:"
