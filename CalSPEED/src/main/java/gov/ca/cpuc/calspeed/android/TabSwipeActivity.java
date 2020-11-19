@@ -1,0 +1,190 @@
+package gov.ca.cpuc.calspeed.android;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
+import android.util.Log;
+
+import com.actionbarsherlock.app.ActionBar;
+import com.actionbarsherlock.app.ActionBar.Tab;
+import com.actionbarsherlock.app.ActionBar.TabListener;
+import com.actionbarsherlock.app.SherlockFragmentActivity;
+
+public abstract class TabSwipeActivity extends SherlockFragmentActivity {
+
+    private ViewPager mViewPager;
+    private TabsAdapter adapter;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        /*
+         * Create the ViewPager and our custom adapter
+         */
+        Log.v(this.getClass().getName(), "start of onCreate()");
+        mViewPager = new ViewPager(this);
+        Log.v(this.getClass().getName(), "calling new TabsAdapter object");
+        adapter = new TabsAdapter( this, mViewPager );
+        mViewPager.setAdapter( adapter );
+        mViewPager.setOnPageChangeListener( adapter );
+
+        /*
+         * We need to provide an ID for the ViewPager, otherwise we will get an exception like:
+         *
+         * java.lang.IllegalArgumentException: No view found for id 0xffffffff for fragment TestFragment{40de5b90 #0 id=0xffffffff android:switcher:-1:0}
+         * at android.support.v4.app.FragmentManagerImpl.moveToState(FragmentManager.java:864)
+         *
+         * The ID 0x7F04FFF0 is large enough to probably never be used for anything else
+         */
+        mViewPager.setId( R.id.viewpager );
+
+        super.onCreate(savedInstanceState);
+
+        /*
+         * Set the ViewPager as the content view
+         */
+        Log.v(this.getClass().getName(), "calling setContentView()");
+        setContentView(mViewPager);
+    }
+
+    protected void addTab(int titleRes, Class<? extends Fragment> fragmentClass, Bundle args ) {
+        adapter.addTab( getString( titleRes ), fragmentClass, args );
+    }
+
+    protected void addTab(CharSequence title, Class<? extends Fragment> fragmentClass, Bundle args ) {
+        adapter.addTab( title, fragmentClass, args );
+    }
+
+    protected void removeTab(int index ) {
+        adapter.removeTab( index );
+    }
+
+    protected void removeTabs(int index, int index2) {
+        adapter.removeTabs(index, index2);
+    }
+
+    protected boolean isCurrentTab(int position) {
+        return adapter.isCurrentTab(position);
+    }
+
+    protected void selectPage(int position) {
+        adapter.onPageSelected(position);
+    }
+
+
+
+    private static class TabsAdapter extends FragmentPagerAdapter implements TabListener, ViewPager.OnPageChangeListener {
+
+        private final SherlockFragmentActivity mActivity;
+        private final ActionBar mActionBar;
+        private final ViewPager mPager;
+
+        public TabsAdapter(SherlockFragmentActivity activity, ViewPager pager) {
+            super(activity.getSupportFragmentManager());
+            this.mActivity = activity;
+            this.mActionBar = activity.getSupportActionBar();
+            this.mPager = pager;
+
+            mActionBar.setNavigationMode( ActionBar.NAVIGATION_MODE_TABS );
+            Log.v(this.getClass().getName(), "calling new TabsAdapter()");
+        }
+
+        private static class TabInfo {
+            public final Class<? extends Fragment> fragmentClass;
+            public final Bundle args;
+            public TabInfo(Class<? extends Fragment> fragmentClass,
+                           Bundle args) {
+                this.fragmentClass = fragmentClass;
+                this.args = args;
+            }
+        }
+
+        private final List<TabInfo> mTabs = new ArrayList<TabInfo>();
+
+        public void addTab( CharSequence title, Class<? extends Fragment> fragmentClass, Bundle args ) {
+            TabInfo tabInfo = new TabInfo( fragmentClass, args );
+            Tab tab = mActionBar.newTab();
+            tab.setText( title );
+            tab.setTabListener( this );
+            tab.setTag( tabInfo );
+
+            mTabs.add( tabInfo );
+
+            mActionBar.addTab( tab );
+            notifyDataSetChanged();
+        }
+
+        public void removeTab( int index ) {
+            mTabs.remove( index );
+            mActionBar.removeTab( mActionBar.getTabAt(index) );
+            notifyDataSetChanged();
+        }
+
+        public void removeTabs(int index, int index2) {
+            mTabs.remove(index2);
+            mTabs.remove(index);
+            mActionBar.removeTab(mActionBar.getTabAt(index2));
+            mActionBar.removeTab(mActionBar.getTabAt(index));
+            notifyDataSetChanged();
+        }
+
+        public boolean isCurrentTab(int position) {
+            return mPager.getCurrentItem() == position;
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            final TabInfo tabInfo = mTabs.get( position );
+            return Fragment.instantiate( mActivity, tabInfo.fragmentClass.getName(), tabInfo.args );
+        }
+
+        @Override
+        public int getCount() {
+            return mTabs.size();
+        }
+
+        public void onPageScrollStateChanged(int arg0) {
+            Utils.hideKeyboard(mActivity);
+        }
+
+        public void onPageScrolled(int arg0, float arg1, int arg2) {
+            Utils.hideKeyboard(mActivity);
+        }
+
+        public void onPageSelected(int position) {
+        	/*
+        	 * Select tab when user swiped
+        	 */
+        	Utils.hideKeyboard(mActivity);
+            mActionBar.setSelectedNavigationItem( position );
+        }
+
+        public void onTabSelected(Tab tab, FragmentTransaction ft) {
+        	/*
+        	 * Slide to selected fragment when user selected tab
+        	 */
+            Log.v(this.getClass().getName(), "onTabSelected() called");
+        	Utils.hideKeyboard(mActivity);
+            final TabInfo tabInfo = (TabInfo) tab.getTag();
+            for ( int i = 0; i < mTabs.size(); i++ ) {
+                if ( mTabs.get( i ) == tabInfo ) {
+                    mPager.setCurrentItem( i );
+                    Log.d(this.getClass().getName(), String.format("Swapping to tab: %d", i));
+                    getItem(i);
+                }
+            }
+        }
+
+        public void onTabUnselected(Tab tab, FragmentTransaction ft) {
+            Utils.hideKeyboard(mActivity);
+        }
+
+        public void onTabReselected(Tab tab, FragmentTransaction ft) {
+            Utils.hideKeyboard(mActivity);
+        }
+    }
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="numDisplayWidth">110dp</dimen>
+    <dimen name="labelWidth">140dp</dimen>
+    <dimen name="unitsWidth">36dp</dimen>
+    <dimen name="standardPadding">10dp</dimen>
+    <dimen name="loadingPadding">40dp</dimen>
+    <dimen name="adjustmentPadding">7dp</dimen>
+    <dimen name="numResultsSize">20dp</dimen>
+    <dimen name="resultsLabelSize">16dp</dimen>
+    <dimen name="historyDetailsSize">14dp</dimen>
+    <dimen name="historyDialogHeight">35dp</dimen>
+    <dimen name="historyMosIconHeight">25dp</dimen>
+    <dimen name="resultsHeight">50dp</dimen>
+    <dimen name="mosResultsHeight">60dp</dimen>
+    <dimen name="legendHeight">50dp</dimen>
+    <dimen name="buttonWidth">130dp</dimen>
+    <dimen name="buttonHeight">180dp</dimen>
+    <dimen name="resultIconWidth">42dp</dimen>
+    <dimen name="videoIconWidth">40dp</dimen>
+    <dimen name="mosIconWidth">45dp</dimen>
+    <dimen name="mosIconHeight">46dp</dimen>
+    <dimen name="historyLabelSize">10sp</dimen>
+    <dimen name="mosPadding">3dp</dimen>
+    <dimen name="addressTextSize">16dp</dimen>
+
+    <dimen name="headerDateWidth">60dp</dimen>
+    <dimen name="headerUpWidth">70dp</dimen>
+    <dimen name="headerDownWidth">70dp</dimen>
+    <dimen name="headerDelayWidth">60dp</dimen>
+    <dimen name="headerDelayVarWidth">60dp</dimen>
+    <dimen name="historyFont">12.5dp</dimen>
+    <dimen name="testHeight">55dp</dimen>
+    <dimen name="testUnitSize">13dp</dimen>
+    <dimen name="textUnitSize">20dp</dimen>
+    <dimen name="historyListSize">12dp</dimen>
+    <dimen name="upDownSize">10dp</dimen>
+    <dimen name="mosQuality">8dp</dimen>
+
+    <dimen name="historyDateSize">15dp</dimen>
+
+    <dimen name="startButtonSize">300dp</dimen>
+    <dimen name="toggleButtonSize">130dp</dimen>
+    <dimen name="loadingCircleSize">60dp</dimen>
+    <dimen name="loadingBarHeight">17.5dp</dimen>
+
+    <dimen name="togglePadding">7dp</dimen>
+    <dimen name="imageRowHeight">60dp</dimen>
+    <dimen name="historyRowPadding">8dp</dimen>
+
+</resources>

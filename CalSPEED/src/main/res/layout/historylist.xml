@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/Item"
+	android:layout_width="wrap_content"
+	android:weightSum="60"
+	android:layout_height="wrap_content"
+	android:orientation="horizontal"
+	android:gravity="left"
+	android:paddingBottom="10dp"
+	android:paddingTop="10dp"
+	android:paddingLeft="10dp"
+	android:paddingRight="10dp"
+	android:background="@color/white"
+	android:divider="@color/grey_font"
+	android:dividerHeight="1dp">
+
+	<TextView
+		android:id="@+id/historyID"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:layout_weight="0"
+		android:gravity="left"
+		android:paddingTop="4dp"
+		android:textColor="#ffffff"
+		android:textSize="12sp"
+		android:visibility="invisible" >
+
+	</TextView>
+
+	<LinearLayout
+		android:id="@+id/historyTimeLayout"
+		android:orientation="vertical"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:layout_weight="10"
+		android:paddingTop="@dimen/historyRowPadding"
+		android:paddingBottom="@dimen/historyRowPadding" >
+
+		<TextView
+			android:id="@+id/historyDate"
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:layout_gravity="center"
+			android:layout_weight="10"
+			android:gravity="center"
+			android:textColor="@color/black"
+			android:textSize="@dimen/historyListSize"
+			android:typeface="sans" />
+
+		<TextView
+			android:id="@+id/historyTime"
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:layout_gravity="center"
+			android:layout_weight="10"
+			android:gravity="center"
+			android:textColor="@color/grey_font"
+			android:textSize="@dimen/historyListSize"
+			android:typeface="sans" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/historyUploadLayout"
+		android:orientation="vertical"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:layout_weight="10"
+		android:paddingTop="@dimen/historyRowPadding"
+		android:paddingBottom="@dimen/historyRowPadding" >
+
+		<TextView
+			android:id="@+id/historyUpload"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_weight="10"
+			android:gravity="center"
+			android:textColor="@color/black"
+			android:textSize="@dimen/historyListSize"
+			android:typeface="sans" />
+
+		<TextView
+			android:id="@+id/historyListUpload"
+			android:text="@string/mbps"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_weight="10"
+			android:gravity="center"
+			android:textColor="@color/grey_font"
+			android:textSize="@dimen/historyListSize"
+			android:typeface="sans" />
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/historyDownloadLayout"
+		android:orientation="vertical"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:layout_weight="10"
+		android:paddingTop="@dimen/historyRowPadding"
+		android:paddingBottom="@dimen/historyRowPadding" >
+
+		<TextView
+			android:id="@+id/historyDownload"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_weight="10"
+			android:gravity="center"
+			android:textColor="@color/black"
+			android:textSize="@dimen/historyListSize"
+			android:typeface="sans" />
+
+		<TextView
+			android:id="@+id/historyListDownload"
+			android:text="@string/mbps"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_weight="10"
+			android:gravity="center"
+			android:textColor="@color/grey_font"
+			android:textSize="@dimen/historyListSize"
+			android:typeface="sans" />
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/historyLatencyLayout"
+		android:orientation="vertical"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:layout_weight="10"
+		android:paddingTop="@dimen/historyRowPadding"
+		android:paddingBottom="@dimen/historyRowPadding" >
+
+		<TextView
+			android:id="@+id/historyLatency"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_weight="10"
+			android:gravity="center"
+			android:textColor="@color/black"
+			android:textSize="@dimen/historyListSize"
+			android:typeface="sans" >
+
+		</TextView>
+
+		<TextView
+			android:text="@string/milliseconds"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_weight="10"
+			android:gravity="center"
+			android:textColor="@color/grey_font"
+			android:textSize="@dimen/historyListSize"
+			android:typeface="sans" />
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/historyVideoQualityLayout"
+		android:orientation="vertical"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:layout_weight="10"
+		android:paddingTop="@dimen/historyRowPadding"
+		android:paddingBottom="@dimen/historyRowPadding" >
+
+		<TextView
+			android:id="@+id/historyVideoQuality"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_weight="10"
+			android:gravity="center"
+			android:textColor="@color/black"
+			android:textSize="@dimen/historyListSize"
+			android:typeface="sans" >
+
+		</TextView>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/historyMosValueLayout"
+		android:orientation="vertical"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:layout_weight="10"
+		android:paddingTop="@dimen/historyRowPadding"
+		android:paddingBottom="@dimen/historyRowPadding" >
+
+		<TextView
+			android:id="@+id/historyMosValue"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_weight="10"
+			android:gravity="center"
+			android:textColor="@color/black"
+			android:textSize="@dimen/historyListSize"
+			android:typeface="sans" >
+
+		</TextView>
+
+	</LinearLayout>
+
+</LinearLayout>    

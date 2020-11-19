@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/topFrame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.04"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingRight="@dimen/standardPadding"
+        android:paddingTop="@dimen/adjustmentPadding" >
+
+        <ToggleButton
+            android:id="@+id/indoorOutdoorToggle"
+            android:layout_width="@dimen/toggleButtonSize"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/standardPadding"
+            android:background="@drawable/gradient"
+            android:drawableLeft="@drawable/indoortoggle"
+            android:drawableRight="@drawable/outdoortoggle"
+            android:textColor="#083059"
+            android:textOff="@string/Indoor"
+            android:textOn="@string/Outdoor" />
+
+        <TextView
+            android:id="@+id/topText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="@dimen/standardPadding"
+            android:textColor="@color/black"
+            android:visibility="invisible"
+            android:textSize="@dimen/textUnitSize" />
+
+	     <ProgressBar 
+            android:layout_height="wrap_content" 
+            android:indeterminate="false" 
+            style="?android:attr/progressBarStyleHorizontal" 
+            android:layout_width="match_parent" 
+            android:progressDrawable="@drawable/blueprogress" 
+            android:maxHeight="@dimen/loadingBarHeight" 
+            android:minHeight="@dimen/loadingBarHeight"             
+	        android:paddingBottom="@dimen/standardPadding"
+            android:id="@+id/ProgressBar"
+            android:paddingLeft="10dp"
+            android:visibility="gone"
+            android:gravity="center" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/testResults"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:inAnimation="@anim/slidein"
+        android:orientation="vertical"
+        android:outAnimation="@anim/slideout"
+        android:paddingTop="@dimen/adjustmentPadding" >
+
+        <LinearLayout 
+            android:id="@+id/uploadResults"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/resultsHeight"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/standardPadding"
+            android:paddingRight="@dimen/adjustmentPadding" >
+
+            <ImageView
+                android:id="@+id/uploadIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/about"
+                android:paddingLeft="@dimen/adjustmentPadding"
+                android:src="@drawable/upload_big" />
+
+            <TextView
+                android:id="@+id/uploadLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/adjustmentPadding"
+                android:paddingTop="@dimen/adjustmentPadding"
+                android:text="@string/uploadLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#083059"
+                android:textSize="@dimen/resultsLabelSize" />
+
+            <TextView
+                android:id="@+id/uploadSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="right"
+                android:paddingRight="@dimen/adjustmentPadding"
+                android:paddingTop="@dimen/adjustmentPadding"
+                android:text="@string/defaultValue"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#083059"
+                android:textSize="@dimen/numResultsSize"
+                android:width="@dimen/numDisplayWidth" />
+
+            <TextView
+                android:id="@+id/uploadUnits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:width="@dimen/unitsWidth"
+                android:gravity="bottom"
+                android:paddingBottom="@dimen/adjustmentPadding"
+                android:text="@string/megabitspersecond"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#083059"
+                android:textSize="@dimen/testUnitSize" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/downloadResults"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/resultsHeight"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/standardPadding"
+            android:paddingRight="@dimen/adjustmentPadding" >
+
+            <ImageView
+                android:id="@+id/downloadIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:adjustViewBounds="true"
+                android:paddingLeft="@dimen/adjustmentPadding"
+                android:src="@drawable/download_big" />
+
+            <TextView
+                android:id="@+id/downloadLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/adjustmentPadding"
+                android:paddingTop="@dimen/adjustmentPadding"
+                android:text="@string/downloadLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#083059"
+                android:textSize="@dimen/resultsLabelSize" />
+
+            
+            <TextView
+                android:id="@+id/downloadSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="right"
+                android:paddingRight="@dimen/adjustmentPadding"
+                android:paddingTop="@dimen/adjustmentPadding"
+                android:text="@string/defaultValue"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#083059"
+                android:textSize="@dimen/numResultsSize"
+                android:width="@dimen/numDisplayWidth" />
+
+
+            <TextView
+                android:id="@+id/downloadUnits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:width="@dimen/unitsWidth"
+                android:gravity="bottom"
+                android:paddingBottom="@dimen/adjustmentPadding"
+                android:text="@string/megabitspersecond"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#083059"
+                android:textSize="@dimen/testUnitSize" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/latencyResults"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/resultsHeight"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/standardPadding"
+            android:paddingRight="@dimen/adjustmentPadding" >
+
+            <ImageView
+                android:id="@+id/latencyIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:adjustViewBounds="true"
+                android:paddingLeft="@dimen/adjustmentPadding"
+                android:src="@drawable/jitter_big" />
+
+            <TextView
+                android:id="@+id/latencyLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/testHeight"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/adjustmentPadding"
+                android:paddingTop="@dimen/adjustmentPadding"
+                android:text="@string/latencyLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#083059"
+                android:textSize="@dimen/resultsLabelSize" />
+
+            <TextView
+                android:id="@+id/latencySpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.50"
+                android:gravity="right"
+                android:paddingRight="@dimen/adjustmentPadding"
+                android:paddingTop="@dimen/adjustmentPadding"
+                android:text="@string/defaultValue"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#083059"
+                android:textSize="@dimen/numResultsSize"
+                android:width="@dimen/numDisplayWidth" />
+
+            <TextView
+                android:id="@+id/latencyUnits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="bottom"
+                android:paddingBottom="@dimen/adjustmentPadding"
+                android:text="@string/milliseconds"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#083059"
+                android:textSize="@dimen/testUnitSize"
+                android:width="@dimen/unitsWidth" />
+
+        </LinearLayout>
+
+        
+        <LinearLayout
+            android:id="@+id/jitterResults"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/resultsHeight"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/standardPadding"
+            android:paddingRight="@dimen/adjustmentPadding" >
+
+            <ImageView
+                android:id="@+id/jitterIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:adjustViewBounds="true"
+                android:paddingLeft="@dimen/adjustmentPadding"
+                android:src="@drawable/latency_big" />
+
+            <TextView
+                android:id="@+id/jitterLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/adjustmentPadding"
+                android:paddingTop="@dimen/adjustmentPadding"
+                android:text="@string/jitterLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#083059"
+                android:textSize="@dimen/resultsLabelSize" />
+            
+            <TextView
+                android:id="@+id/jitterSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="right"
+                android:paddingRight="@dimen/adjustmentPadding"
+                android:paddingTop="@dimen/adjustmentPadding"
+                android:text="@string/defaultValue"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#083059"
+                android:textSize="@dimen/numResultsSize"
+                android:width="@dimen/numDisplayWidth" />
+
+            
+            <TextView
+                android:id="@+id/jitterUnits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="bottom"
+                android:paddingBottom="@dimen/adjustmentPadding"
+                android:text="@string/milliseconds"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#083059"
+                android:textSize="@dimen/testUnitSize"
+                android:width="@dimen/unitsWidth" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/mosResults"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/resultsHeight"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/standardPadding"
+            android:paddingRight="@dimen/adjustmentPadding"
+            android:visibility="gone"  >
+
+            <ImageView
+                android:id="@+id/mosIcon"
+                android:layout_width="@dimen/mosIconWidth"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:adjustViewBounds="true"
+                android:paddingLeft="@dimen/adjustmentPadding"
+                android:src="@drawable/mos"
+               />
+
+            <TextView
+                android:id="@+id/mosLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/testHeight"
+                android:layout_weight="0.99"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/adjustmentPadding"
+                android:paddingRight="@dimen/adjustmentPadding"
+                android:paddingTop="@dimen/adjustmentPadding"
+                android:text="@string/mosLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#083059"
+                android:textSize="@dimen/resultsLabelSize"
+                />
+
+            <TextView
+                android:id="@+id/mosGrade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.53"
+                android:gravity="right"
+                android:paddingRight="@dimen/adjustmentPadding"
+                android:paddingTop="@dimen/adjustmentPadding"
+                android:text="@string/defaultGrade"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#083059"
+                android:textSize="@dimen/numResultsSize"
+                android:width="@dimen/numDisplayWidth" 
+                />
+			
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/ButtonStandardTest"
+            android:layout_width="@dimen/startButtonSize"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bluebutton"
+            android:text="@string/standardTest"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/white"
+            android:paddingLeft="90dp"
+            android:textSize="@dimen/numResultsSize"
+            android:paddingRight="90dp" />
+        <ProgressBar
+			    android:id="@+id/loadingIcon"
+			    android:layout_height="@dimen/loadingCircleSize"
+			    android:layout_width="@dimen/loadingCircleSize"
+			    android:layout_gravity="center_horizontal"
+			    android:layout_marginTop="50dp"
+			    android:visibility="gone" 
+			    android:layout_margin="@dimen/loadingPadding"/>
+        
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/TextViewMain"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom"
+        android:paddingBottom="@dimen/standardPadding"
+        android:paddingTop="@dimen/standardPadding"
+        android:scrollbars="vertical"
+        android:text=""
+        android:visibility="gone" />
+
+</LinearLayout>

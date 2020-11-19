@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="numDisplayWidth">165dp</dimen>
+    <dimen name="labelWidth">210dp</dimen>
+    <dimen name="unitsWidth">52.5dp</dimen>
+    <dimen name="standardPadding">20dp</dimen>
+    <dimen name="adjustmentPadding">10dp</dimen>
+    <dimen name="loadingPadding">50dp</dimen>
+    <dimen name="numResultsSize">30dp</dimen>
+    <dimen name="resultsLabelSize">22dp</dimen>
+    <dimen name="historyDetailsSize">24dp</dimen>
+    <dimen name="historyDialogHeight">60dp</dimen>
+    <dimen name="resultsHeight">90dp</dimen>
+    <dimen name="mosResultsHeight">100dp</dimen>
+    <dimen name="buttonWidth">195dp</dimen>
+    <dimen name="legendHeight">60dp</dimen>
+    <dimen name="buttonHeight">270dp</dimen>
+    <dimen name="mosIconWidth">70dp</dimen>
+    <dimen name="mosIconHeight">80dp</dimen>
+    <dimen name="resultIconWidth">70dp</dimen>
+    <dimen name="videoIconWidth">70dp</dimen>
+    <dimen name="historyLabelSize">14sp</dimen>
+    <dimen name="mosPadding">5dp</dimen>
+    <dimen name="addressTextSize">18dp</dimen>
+    <dimen name="headerDateWidth">90dp</dimen>
+    <dimen name="headerUpWidth">105dp</dimen>
+    <dimen name="headerDownWidth">105dp</dimen>
+    <dimen name="headerDelayWidth">90dp</dimen>
+    <dimen name="headerDelayVarWidth">90dp</dimen>
+    <dimen name="historyFont">15dp</dimen>
+    <dimen name="testHeight">60dp</dimen>
+    <dimen name="testUnitSize">20dp</dimen>
+    <dimen name="textUnitSize">30dp</dimen>
+    
+    <dimen name="historyListSize">18dp</dimen>
+    <dimen name="mosQuality">12dp</dimen>
+    
+    <dimen name="historyDateSize">22dp</dimen>
+    
+    <dimen name="startButtonSize">400dp</dimen>
+    <dimen name="testerViewSize">130dp</dimen>
+    <dimen name="loadingCircleSize">90dp</dimen>
+    <dimen name="loadingBarHeight">25dip</dimen>
+    
+    <dimen name="togglePadding">10dp</dimen>
+    <dimen name="imageRowHeight">90dp</dimen>
+    <dimen name="historyRowPadding">12dp</dimen>
+    
+    
+</resources>

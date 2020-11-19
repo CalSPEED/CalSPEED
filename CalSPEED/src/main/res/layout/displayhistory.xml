@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="2dp"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:layout_marginTop="2dp"
+    android:orientation="vertical"
+    android:background="@color/white"
+	android:divider="@color/black"
+    android:dividerHeight="1.5dp"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+
+
+	<LinearLayout
+            android:id="@+id/imageRow"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/imageRowHeight"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:weightSum="60"
+            android:divider="@color/grey_font"
+            android:dividerHeight="1.5dp"
+            android:paddingTop="@dimen/adjustmentPadding" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="10"
+            android:weightSum="100"
+            android:orientation="vertical" >
+            <TextView
+                android:id="@+id/TextView01"
+                android:text="Date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:layout_weight="10"
+                android:textStyle="bold"
+                android:textSize="@dimen/historyLabelSize"
+                android:gravity="center">
+            </TextView>
+            <ImageView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/about"
+                android:src="@drawable/calendar_big"
+                android:gravity="center"
+                android:layout_weight="90"/>
+
+        </LinearLayout>
+
+
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="10"
+            android:orientation="vertical"
+            android:weightSum="100"
+            >
+            <TextView
+                android:id="@+id/TextView02"
+                android:text="Up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="@dimen/historyLabelSize"
+                android:gravity="center"
+                android:layout_weight="10"
+                >
+            </TextView>
+            <ImageView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|right"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/about"
+                android:src="@drawable/upload_big"
+                android:gravity="center"
+                android:layout_weight="90"
+                 />
+        </LinearLayout>
+
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="10"
+            android:weightSum="100"
+            android:orientation="vertical" >
+            <TextView
+                android:id="@+id/TextView03"
+                android:text="Down"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:layout_weight="10"
+                android:textSize="@dimen/historyLabelSize"
+                android:textStyle="bold"
+                android:gravity="center">
+            </TextView>
+            <ImageView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/about"
+                android:src="@drawable/download_big"
+                android:gravity="center"
+                android:layout_weight="90"
+               />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="10"
+            android:orientation="vertical"
+            android:weightSum="100"
+             >
+            <TextView
+                android:id="@+id/TextView04"
+                android:text="Latency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="@dimen/historyLabelSize"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_weight="10">
+            </TextView>
+            <ImageView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/about"
+                android:src="@drawable/jitter_big"
+                android:layout_weight="90"
+                android:gravity="center" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="10"
+            android:orientation="vertical"
+            android:weightSum="100" >
+            <TextView
+                android:id="@+id/TextView05"
+                android:text="Video"
+                android:textSize="@dimen/historyLabelSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_weight="10">
+            </TextView>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/about"
+                android:src="@drawable/video_quality_big"
+                android:layout_weight="100"
+                android:gravity="center" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="10"
+            android:orientation="vertical"
+            android:weightSum="100" >
+            <TextView
+                android:id="@+id/TextView06"
+                android:text="MOS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:layout_weight="5"
+                android:textSize="@dimen/historyLabelSize"
+                android:textStyle="bold"
+                android:gravity="center">
+            </TextView>
+           <ImageView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/mosPadding"
+                android:paddingBottom="@dimen/mosPadding"
+                android:layout_gravity="center_vertical"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/about"
+                android:src="@drawable/mos"
+                android:layout_weight="95"
+                android:gravity="center" />
+        </LinearLayout>
+
+        </LinearLayout>
+
+	<ListView
+        android:id="@+id/ListView"
+        android:choiceMode="singleChoice"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:divider="@color/grey_font"
+        android:dividerHeight="1.5dp" >
+    </ListView>
+
+
+</LinearLayout>

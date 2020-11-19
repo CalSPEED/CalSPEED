@@ -1,0 +1,32 @@
+OS X related info
+*.DS_Store
+
+# Binary Java classes
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.war
+*.ear
+*.apk
+
+# IDEA / Android Studio
+*.idea
+.idea/
+
+# Gradle related files
+.gradle/
+*.gradle
+
+# Project configurations
+*.iml
+local.properties
+
+# Builds 
+actionbarsherlock/build/
+googleplayservices_lib/build/
+CalSPEED/build
+*.rawproto
+build/
