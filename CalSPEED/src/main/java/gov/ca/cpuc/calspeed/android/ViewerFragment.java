@@ -1,17 +1,13 @@
 /*
-Copyright (c) 2013, California State University Monterey Bay (CSUMB).
+Copyright (c) 2020, California State University Monterey Bay (CSUMB).
 All rights reserved.
-
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
-
     1. Redistributions of source code must retain the above copyright notice,
        this list of conditions and the following disclaimer.
-
     2. Redistributions in binary form must reproduce the above
-           copyright notice, this list of conditions and the following disclaimer in the
+       copyright notice, this list of conditions and the following disclaimer in the
        documentation and/or other materials provided with the distribution.
-
     3. Neither the name of the CPUC, CSU Monterey Bay, nor the names of
        its contributors may be used to endorse or promote products derived from
        this software without specific prior written permission.
@@ -189,8 +185,7 @@ public class ViewerFragment extends SherlockFragment implements
 	//added for temporary Google Geocode
 	private String jsonCoord(String address) throws IOException {
 		URL url = new URL("https://maps.googleapis.com/maps/api/geocode/json?address=" +
-				address + "&components=administrative_area:CA|country:US&sensor=false&" +
-				"key=AIzaSyBErj9HpaVi13AjChFZ2d8DhRJkCHuth0s");
+				address + "&components=administrative_area:CA|country:US&sensor=false&");
         Log.v("JSONCoord", "Making connection to " + url.toString());
 		URLConnection connection = url.openConnection();
 		BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
@@ -388,7 +383,7 @@ public class ViewerFragment extends SherlockFragment implements
 							+ target.latitude
 							+ ","
 							+ target.longitude
-							+ "&sensor=true&key=AIzaSyBErj9HpaVi13AjChFZ2d8DhRJkCHuth0s";
+							+ "&sensor=true";
                     String geoCodingResults = "";
 					try {
 						final ReverseGeo geoCoder = new ReverseGeo();
@@ -437,7 +432,7 @@ public class ViewerFragment extends SherlockFragment implements
 							String latVal = String.valueOf(target.latitude);
 							String lngVal = String.valueOf(target.longitude);
                             try {
-								reverseGeo = "http://www.mapquestapi.com/geocoding/v1/reverse?key=Fmjtd%7Cluubnu6bn1%2Cr2%3Do5-9uyn5w&json="
+								reverseGeo = "http://www.mapquestapi.com/geocoding/v1/reverse?&json="
 								   + URLEncoder.encode("{location:{latLng:{lat:", "UTF-8") 
 								   + URLEncoder.encode(latVal, "UTF-8")
 								   + ",lng:"

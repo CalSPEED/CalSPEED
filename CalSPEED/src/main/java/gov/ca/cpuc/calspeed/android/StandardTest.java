@@ -1,71 +1,98 @@
 /*
- Copyright 2003 University of Chicago.  All rights reserved.
- The Web100 Network Diagnostic Tool (NDT) is distributed subject to
- the following license conditions:
- SOFTWARE LICENSE AGREEMENT
- Software: Web100 Network Diagnostic Tool (NDT)
+Copyright 2003 University of Chicago.  All rights reserved.
+The Web100 Network Diagnostic Tool (NDT) is distributed subject to
+the following license conditions:
+SOFTWARE LICENSE AGREEMENT
+Software: Web100 Network Diagnostic Tool (NDT)
 
- 1. The "Software", below, refers to the Web100 Network Diagnostic Tool (NDT)
- (in either source code, or binary form and accompanying documentation). Each
- licensee is addressed as "you" or "Licensee."
+1. The "Software", below, refers to the Web100 Network Diagnostic Tool (NDT)
+(in either source code, or binary form and accompanying documentation). Each
+licensee is addressed as "you" or "Licensee."
 
- 2. The copyright holder shown above hereby grants Licensee a royalty-free
- nonexclusive license, subject to the limitations stated herein and U.S. Government
- license rights.
+2. The copyright holder shown above hereby grants Licensee a royalty-free
+nonexclusive license, subject to the limitations stated herein and U.S. Government
+license rights.
 
- 3. You may modify and make a copy or copies of the Software for use within your
- organization, if you meet the following conditions:
- a. Copies in source code must include the copyright notice and this Software
- License Agreement.
- b. Copies in binary form must include the copyright notice and this Software
- License Agreement in the documentation and/or other materials provided with the copy.
+3. You may modify and make a copy or copies of the Software for use within your
+organization, if you meet the following conditions:
+a. Copies in source code must include the copyright notice and this Software
+License Agreement.
+b. Copies in binary form must include the copyright notice and this Software
+License Agreement in the documentation and/or other materials provided with the copy.
 
- 4. You may make a copy, or modify a copy or copies of the Software or any
- portion of it, thus forming a work based on the Software, and distribute copies
- outside your organization, if you meet all of the following conditions:
- a. Copies in source code must include the copyright notice and this
- Software License Agreement;
- b. Copies in binary form must include the copyright notice and this
- Software License Agreement in the documentation and/or other materials
- provided with the copy;
- c. Modified copies and works based on the Software must carry prominent
- notices stating that you changed specified portions of the Software.
+4. You may make a copy, or modify a copy or copies of the Software or any
+portion of it, thus forming a work based on the Software, and distribute copies
+outside your organization, if you meet all of the following conditions:
+a. Copies in source code must include the copyright notice and this
+Software License Agreement;
+b. Copies in binary form must include the copyright notice and this
+Software License Agreement in the documentation and/or other materials
+provided with the copy;
+c. Modified copies and works based on the Software must carry prominent
+notices stating that you changed specified portions of the Software.
 
- 5. Portions of the Software resulted from work developed under a U.S. Government
- contract and are subject to the following license: the Government is granted
- for itself and others acting on its behalf a paid-up, nonexclusive, irrevocable
- worldwide license in this computer software to reproduce, prepare derivative
- works, and perform publicly and display publicly.
+5. Portions of the Software resulted from work developed under a U.S. Government
+contract and are subject to the following license: the Government is granted
+for itself and others acting on its behalf a paid-up, nonexclusive, irrevocable
+worldwide license in this computer software to reproduce, prepare derivative
+works, and perform publicly and display publicly.
 
- 6. WARRANTY DISCLAIMER. THE SOFTWARE IS SUPPLIED "AS IS" WITHOUT WARRANTY
- OF ANY KIND. THE COPYRIGHT HOLDER, THE UNITED STATES, THE UNITED STATES
- DEPARTMENT OF ENERGY, AND THEIR EMPLOYEES: (1) DISCLAIM ANY WARRANTIES,
- EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY IMPLIED WARRANTIES
- OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE OR NON-INFRINGEMENT,
- (2) DO NOT ASSUME ANY LEGAL LIABILITY OR RESPONSIBILITY FOR THE ACCURACY,
- COMPLETENESS, OR USEFULNESS OF THE SOFTWARE, (3) DO NOT REPRESENT THAT USE
- OF THE SOFTWARE WOULD NOT INFRINGE PRIVATELY OWNED RIGHTS, (4) DO NOT WARRANT
- THAT THE SOFTWARE WILL FUNCTION UNINTERRUPTED, THAT IT IS ERROR-FREE OR THAT
- ANY ERRORS WILL BE CORRECTED.
+6. WARRANTY DISCLAIMER. THE SOFTWARE IS SUPPLIED "AS IS" WITHOUT WARRANTY
+OF ANY KIND. THE COPYRIGHT HOLDER, THE UNITED STATES, THE UNITED STATES
+DEPARTMENT OF ENERGY, AND THEIR EMPLOYEES: (1) DISCLAIM ANY WARRANTIES,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY IMPLIED WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE OR NON-INFRINGEMENT,
+(2) DO NOT ASSUME ANY LEGAL LIABILITY OR RESPONSIBILITY FOR THE ACCURACY,
+COMPLETENESS, OR USEFULNESS OF THE SOFTWARE, (3) DO NOT REPRESENT THAT USE
+OF THE SOFTWARE WOULD NOT INFRINGE PRIVATELY OWNED RIGHTS, (4) DO NOT WARRANT
+THAT THE SOFTWARE WILL FUNCTION UNINTERRUPTED, THAT IT IS ERROR-FREE OR THAT
+ANY ERRORS WILL BE CORRECTED.
 
- 7. LIMITATION OF LIABILITY. IN NO EVENT WILL THE COPYRIGHT HOLDER, THE
- UNITED STATES, THE UNITED STATES DEPARTMENT OF ENERGY, OR THEIR EMPLOYEES:
- BE LIABLE FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL OR PUNITIVE
- DAMAGES OF ANY KIND OR NATURE, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS
- OR LOSS OF DATA, FOR ANY REASON WHATSOEVER, WHETHER SUCH LIABILITY IS ASSERTED
- ON THE BASIS OF CONTRACT, TORT (INCLUDING NEGLIGENCE OR STRICT LIABILITY), OR
- OTHERWISE, EVEN IF ANY OF SAID PARTIES HAS BEEN WARNED OF THE POSSIBILITY OF
- SUCH LOSS OR DAMAGES.
- The Software was developed at least in part by the University of Chicago,
- as Operator of Argonne National Laboratory (http://miranda.ctd.anl.gov:7123/).
- */
+7. LIMITATION OF LIABILITY. IN NO EVENT WILL THE COPYRIGHT HOLDER, THE
+UNITED STATES, THE UNITED STATES DEPARTMENT OF ENERGY, OR THEIR EMPLOYEES:
+BE LIABLE FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL OR PUNITIVE
+DAMAGES OF ANY KIND OR NATURE, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS
+OR LOSS OF DATA, FOR ANY REASON WHATSOEVER, WHETHER SUCH LIABILITY IS ASSERTED
+ON THE BASIS OF CONTRACT, TORT (INCLUDING NEGLIGENCE OR STRICT LIABILITY), OR
+OTHERWISE, EVEN IF ANY OF SAID PARTIES HAS BEEN WARNED OF THE POSSIBILITY OF
+SUCH LOSS OR DAMAGES.
+The Software was developed at least in part by the University of Chicago,
+as Operator of Argonne National Laboratory (http://miranda.ctd.anl.gov:7123/).
 
-//
-// Modified work: The original source code (NdtTests.java) comes from the NDT Android app
-//                that is available from http://code.google.com/p/ndt/.
-//                It's modified for the CalSPEED Android app by California 
-//                State University Monterey Bay (CSUMB) on April 29, 2013.
-// 
+Modified work: The original source code (NdtTests.java) comes from the NDT Android app
+               that is available from http://code.google.com/p/ndt/.
+               It's modified for the CalSPEED Android app by California
+               State University Monterey Bay (CSUMB) on April 29, 2013.
+
+
+Copyright (c) 2020, California State University Monterey Bay (CSUMB).
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+    1. Redistributions of source code must retain the above copyright notice,
+       this list of conditions and the following disclaimer.
+
+    2. Redistributions in binary form must reproduce the above
+       copyright notice, this list of conditions and the following disclaimer in the
+       documentation and/or other materials provided with the distribution.
+
+    3. Neither the name of the CPUC, CSU Monterey Bay, nor the names of
+       its contributors may be used to endorse or promote products derived from
+       this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
 
 package gov.ca.cpuc.calspeed.android;
 
